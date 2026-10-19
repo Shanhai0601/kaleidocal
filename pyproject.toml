@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kaleidocal"
+version = "0.1.0"
+description = "冷门历法万花筒：把农历、干支、玛雅长纪历、法国共和历统一到儒略日，任意互转"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "DELL" }]
+keywords = ["calendar", "lunar", "ganzhi", "maya", "julian-day", "chronology"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+
+[project.scripts]
+kaleidocal = "kaleidocal.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["kaleidocal*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
